@@ -1,4 +1,4 @@
-=== Free Live Chat by Tidio Elements ===
+=== Chat ===
 Contributors: MatthewTidio
 Tags: tidio, chat, chat online, chat software, contact plugin, contact us, customer support, free chat, widget, elements
 Donate link: http://www.tidioelements.com/
