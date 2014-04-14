@@ -19,6 +19,7 @@ signing up - integrates with your website in less than 20 seconds
 Do you need a simple and functional Chat for your website? We are pleased to 
 present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
 which it won’t be hard for you to:
+
 * See who visits your website (which browser they use, and what country they are from)
 * Talk to the users of your website
 * Adjust the chat’s color scheme to your website
