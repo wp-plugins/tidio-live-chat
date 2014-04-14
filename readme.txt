@@ -1,0 +1,62 @@
+=== Tidio Chat ===
+Contributors: MatthewTidio
+Tags: tidio, chat, chat online, chat software, contact plugin, contact us, customer support, free chat, widget, elements
+Donate link: http://www.tidioelements.com/
+Requires at least: 3.4
+Tested up to: 3.8
+Stable tag: trunk
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Meet Tidio Live Chat - a totally free chat for your website. No logging in, no 
+signing up - integrates with your website in less than 20 seconds
+
+== Description ==
+
+Meet Tidio Live Chat - a totally free chat for your website. No logging in, no 
+signing up - integrates with your website in less than 20 seconds
+
+Do you need a simple and functional Chat for your website? We are pleased to 
+present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
+which it won’t be hard for you to:
+* See who visits your website (which browser they use, and what country they are from)
+* Talk to the users of your website
+* Adjust the chat’s color scheme to your website
+* Edit the operator’s info and upload a thumbnail
+* Set up automated messages sent to users after a website activity
+
+= How does it work? =
+Just after the installation process, open the “LiveChat” tab and it’s done! You 
+will be presented with a list of your website’s users, to whom you can write 
+anytime and there will appear an add-on on your website, thanks to which your 
+visitors will be able to write to you.
+
+== Installation ==
+1. Go to WordPress Control Panel
+1. Click "Plugins", then "Add New"
+1. Type in "Tidio Live Chat" and click "Search Plugins"
+1. Download and install the Plugin
+1. Click the "Activate Plugin" link
+1. Move to the "Live Chat" section in the menu
+1. Done! Now you can start talk with your users
+
+== Frequently Asked Questions ==
+
+= Do I need to sign up in order to use the Chat? =
+No, in order to use the Chat you just need to install the add-on and it’s done! 
+No registration/logging in.
+
+= Is the Chat free and are there any hidden charges? =
+The Chat is totally free with no hidden charges.
+
+== Screenshots ==
+1. Admin Panel
+
+== Changelog ==
+= 1.0 =
+* Initial release.
+
+
+== Upgrade Notice ==
+= 1.0 =
+* Initial release.

@@ -1,0 +1,9 @@
+#chat-loading,
+#chat-content {
+	display: none;
+	margin-top: 20px;
+}
+
+#chat-iframe {
+	width: 100%;
+}
