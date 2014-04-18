@@ -12,6 +12,31 @@ class TidioChatOptions {
 		
 	}
 	
+	public function getChatSettings(){
+
+		$chatSettings = get_option('tidio-chat-settings');
+		
+		if($chatSettings)
+			
+			return json_decode($chatSettings, true);
+			
+		//	
+					 
+		$chatSettings = array(
+			'email' => get_bloginfo('admin_email'),
+			'base_color' => '#2E4255',
+			'online_message' => 'Chat with us',
+			'offline_message' => 'Leave a message',
+			'language' => 'en'
+		);
+		
+		update_option('tidio-chat-settings', json_encode($chatSettings));
+		
+		return $chatSettings;
+		
+
+	}
+	
 	public function getPrivateKey(){
 		
 		$tidioPrivateKey = get_option('tidio-chat-private-key');

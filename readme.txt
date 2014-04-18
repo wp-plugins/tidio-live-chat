@@ -54,6 +54,10 @@ The Chat is totally free with no hidden charges.
 1. Admin Panel
 
 == Changelog ==
+
+= 1.1 =
+* Plugin options was added.
+
 = 1.0 =
 * Initial release.
 

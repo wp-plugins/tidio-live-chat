@@ -1,3 +1,19 @@
+@import url('plugin-minicolors.css');
+
+/* General */
+
+h2 {
+	
+}
+
+h2 .settings-link {
+	font-size: 14px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/* Chat - General */
+
 #chat-loading,
 #chat-content {
 	display: none;
@@ -7,3 +23,148 @@
 #chat-iframe {
 	width: 100%;
 }
+
+/* Tidio Dialog */
+
+#dialog-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .8);
+	
+	z-index: 50;
+	
+	display: none;
+}
+
+.frame-dialog-wrap {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	display: none;
+	
+	z-index: 51;
+
+}
+
+.frame-dialog {	
+	background: #DADFE2;
+	display: block;
+	position: relative;
+	margin: 0px auto;
+	padding: 25px 30px;
+	border: 5px solid #fff;
+	width: 800px;
+	z-index: 51;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.frame-dialog h3 {
+	margin: 10px 0px 35px;
+	color: #394A5E;
+	font-size: 32px;
+	font-weight: 100;
+}
+
+.frame-dialog .btn-close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	background: #4998F6;
+	padding: 5px 11px;
+	color: #FFF;
+	font-weight: bold;
+	cursor: pointer;	
+	text-decoration: none;
+}
+
+.frame-dialog .dialog-handle {
+	width: 100%;
+	padding-right: 3px;
+	height: 20px;
+	
+	position: absolute;
+	top: -23px;
+	left: 0px;
+	
+	background: #ccc;
+	margin-right: -2px;
+	
+	cursor: move;
+	
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+	border-color: #ccc;	
+}
+
+/* Form Default */
+
+.form-default {
+	
+}
+
+.form-default .e {
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.form-default .e:last-child {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	border-bottom: 0px;
+}
+
+.form-default .e > .minicolors {
+	margin-bottom: -15px;
+	margin-left: 2px;	
+}
+
+.form-default label {
+	min-width: 120px;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+.form-default input,
+.form-default select {
+	margin-left: 15px;
+	width: 350px;
+	padding: 8px 10px;
+	float: left;
+}
+
+.form-default .e-submit {
+	text-align: left;
+}
+
+/* Minicolors */
+
+.minicolors-input {
+	padding: 10px 10px 10px 22px !important;
+}
+
+.minicolors-swatch {
+	top: 2px !important;
+	left: 14px !important;
+}
+
+.minicolors-position-left .minicolors-panel {
+	top: 26px !important;
+	left: 14px !important;
+}
+
+/* Clearfix */
+
+.clearfix:before, .clearfix:after { content: "."; display: block; height: 0; overflow: hidden; } .clearfix:after { clear: both; }
+
+
+
