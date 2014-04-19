@@ -4,11 +4,17 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidioelements.com
  * Description: Free live chat from Tidio Elements
- * Version: 1.1
+ * Version: 1.0
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiomobile.com
  * License: GPL2
  */
+ 
+if(!class_exists('TidioPluginsScheme')){
+	 
+	 require "classes/TidioPluginsScheme.php";
+	 
+} 
  
 class TidioLiveChat {
 	
@@ -47,6 +53,14 @@ class TidioLiveChat {
 	// Enqueue Script
 	
 	public function enqueueScript(){
+
+		$iCanUseThisPlugin = TidioPluginsScheme::usePlugin('chat');
+		
+		if(!$iCanUseThisPlugin){
+						
+			return false;
+			
+		}
 		
 		$tidioPublicKey = get_option('tidio-chat-public-key');
 				

@@ -6,6 +6,16 @@ $tidioChatOptions = new TidioChatOptions();
 
 //
 
+if(!class_exists('TidioPluginsScheme')){
+
+	require "classes/TidioPluginsScheme.php";
+
+}
+
+TidioPluginsScheme::registerPlugin('chat');
+
+//
+
 $tidioPublicKey = $tidioChatOptions->getPublicKey();
 
 $tidioPrivateKey = $tidioChatOptions->getPrivateKey();
@@ -13,6 +23,8 @@ $tidioPrivateKey = $tidioChatOptions->getPrivateKey();
 $chatSettings = $tidioChatOptions->getChatSettings();
 
 $extensionUrl = plugins_url(basename(__DIR__).'/');
+
+$compatibilityPlugin = TidioPluginsScheme::compatibilityPlugin('chat');
 
 //
 
@@ -25,7 +37,13 @@ wp_enqueue_style('tidio-chat-css' );
 
 <div class="wrap">
 	<h2>Tidio Live Chat<a href="#" id="chat-settings-link" class="settings-link">settings</a></h2>
+
+    <?php if(!$compatibilityPlugin): ?>
+        
+    <div class="alert alert-info" style="margin: 10px 0px 15px;">We're sorry, this plugin is not compatible with other Tidio Elements plugins - that is why it cannot be displayed on your site. To take advantage of all the possibilities our platform offers, please install <a href="http://wordpress.org/plugins/tidio-elements-integrator/" target="_blank" style="font-weight: bold;">Tidio Elements Integrator</a> plugin or uninstall the other plugins.</div>    
     
+    <?php endif; ?>
+
     <div id="chat-loading">
     	<p>Loading...</p>
     </div>
