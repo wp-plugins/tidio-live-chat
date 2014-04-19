@@ -4,7 +4,7 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidioelements.com
  * Description: Free live chat from Tidio Elements
- * Version: 1.0
+ * Version: 1.2
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiomobile.com
  * License: GPL2

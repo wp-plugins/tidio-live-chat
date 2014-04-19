@@ -1,64 +1,66 @@
-=== Tidio Chat ===
+=== Free Live Chat by Tidio Elements ===
 Contributors: MatthewTidio
-Tags: tidio, elements, visual, website, editor, buildier, wysiwyg
+Tags: tidio, chat, chat online, chat software, contact plugin, contact us, customer support, free chat, widget, elements, live chat
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Meet Tidio Chat a plugin that will turn your WordPress into a fully 
-functional editor which makes editing/adding content easier than ever!
+Meet Tidio Live Chat - a totally free chat for your website. No logging in, no 
+signing up - integrates with your website in less than 20 seconds
 
 == Description ==
 
-Do you envy Wix, 1and1 or weebly.com users for their editors' ease and
-intuitiveness? Do you have a tough time whenever you want to change a font color
-or remove/add an element, while they do it on the spot? Meet Visual Website
-Editor from [Tidio Elements](http://www.tidioelements.com/) - a simple and intuitive editor thanks to which
-making changes to your Website will be easier than ever. 
+Meet Tidio Live Chat - a totally free chat for your website. No logging in, no 
+signing up - integrates with your website in less than 20 seconds
 
-You just need to click the "Go to Visual Editor" button after you install the 
-plugin and you will be taken to an advanced editor compatible with your Website.
+Do you need a simple and functional Chat for your website? We are pleased to 
+present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
+which it won’t be hard for you to:
 
-You will be automatically logged into the editor on our site. Logging in is 
-conducted through SECURE_AUTH_KEY defined in the wp-config.php file. Based on 
-this information the correct code will be sent to your site.
+* See who visits your website (which browser they use, and what country they are from)
+* Talk to the users of your website
+* Adjust the chat’s color scheme to your website
+* Edit the operator’s info and upload a thumbnail
+* Set up automated messages sent to users after a website activity
 
-After performing changes through the editor a Tidio Elements script allowing 
-changes in the website will be added to your site.
+= How does it work? =
+Just after the installation process, open the “LiveChat” tab and it’s done! You 
+will be presented with a list of your website’s users, to whom you can write 
+anytime and there will appear an add-on on your website, thanks to which your 
+visitors will be able to write to you.
 
 == Installation ==
 1. Go to WordPress Control Panel
 1. Click "Plugins", then "Add New"
-1. Type in "Visual Editor" and click "Search Plugins"
+1. Type in "Tidio Live Chat" and click "Search Plugins"
 1. Download and install the Plugin
 1. Click the "Activate Plugin" link
-1. Move to the "Visual Editor" section in the menu
-1. Click "Begin Website Editing"
-1. You will be redirected to the editor. Done!
+1. Move to the "Live Chat" section in the menu
+1. Done! Now you can start talk with your users
 
 == Frequently Asked Questions ==
 
-= How do I gain access to edit my site? =
+= Do I need to sign up in order to use the Chat? =
+No, in order to use the Chat you just need to install the add-on and it’s done! 
+No registration/logging in.
 
-Automatic authorization for Tidio Elements editor is based on the 
-SECURE_AUTH_KEY defined in the wp-config.php file of your WordPress site.
-
-= What if Tidio Elements server goes down? =
-
-Activation of our script is carried out through a standard <script> tag.
-When accessing the server is not possible the script is not downloaded and the 
-site will work as it was before it was edited. It does not make the site 
-inactive.
+= Is the Chat free and are there any hidden charges? =
+The Chat is totally free with no hidden charges.
 
 == Screenshots ==
-1. Content Editing.
-2. Color Scheme Editing.
-3. Plugin Editing.
+1. Admin Panel
 
 == Changelog ==
+
+= 1.2 =
+* New version of chat
+
+= 1.1 =
+* Plugin options was added.
+
 = 1.0 =
 * Initial release.
 
