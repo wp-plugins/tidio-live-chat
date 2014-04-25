@@ -55,11 +55,16 @@ The Chat is totally free with no hidden charges.
 
 == Changelog ==
 
+= 1.2.1 =
+* (fixed) curl followlocation error
+
 = 1.2 =
-* New version of chat
+* (fixed) compatibility with others tidio plugins
+* (added) appearance editor
+* (added) compatibility with wordpress 3.9
 
 = 1.1 =
-* Plugin options was added.
+* (added) chat settings
 
 = 1.0 =
 * Initial release.
