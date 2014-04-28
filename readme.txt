@@ -13,9 +13,6 @@ signing up - integrates with your website in less than 20 seconds
 
 == Description ==
 
-Meet Tidio Live Chat - a totally free chat for your website. No logging in, no 
-signing up - integrates with your website in less than 20 seconds
-
 Do you need a simple and functional Chat for your website? We are pleased to 
 present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
 which it won’t be hard for you to:
@@ -25,6 +22,8 @@ which it won’t be hard for you to:
 * Adjust the chat’s color scheme to your website
 * Edit the operator’s info and upload a thumbnail
 * Set up automated messages sent to users after a website activity
+
+[youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
