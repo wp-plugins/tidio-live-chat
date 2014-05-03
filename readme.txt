@@ -1,6 +1,6 @@
 === Free Live Chat by Tidio Elements ===
 Contributors: MatthewTidio
-Tags: tidio, chat, chat online, chat software, contact plugin, customer support, free chat, widget, live chat, chat online, admin, chat manager
+Tags: tidio, chat, chat online, chat software, contact plugin, customer support, free chat, widget, live chat, chat online, admin, chat manager, zopim, olark
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
