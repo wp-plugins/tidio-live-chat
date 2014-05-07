@@ -42,33 +42,12 @@ wp_enqueue_style('tidio-chat-css' );
 
 ?>
 
-<!-- Le' Script -->
-
+<script> var $ = jQuery; </script>
 <script src="<?php echo $extensionUrl ?>/media/js/plugin-minicolors.js"></script>
 <script src="<?php echo $extensionUrl ?>/media/js/tidio-dialog.js"></script>
 <script src="<?php echo $extensionUrl ?>/media/js/plugin-upgrade.js"></script>
 <script src="<?php echo $extensionUrl ?>/media/js/translate-dialog.js"></script>
 <script src="<?php echo $extensionUrl ?>/media/js/tidio-chat-options.js"></script>
-
-<script>
-
-var $ = jQuery;
-
-tidioChatOptions.create({
-	extension_url: '<?php echo $extensionUrl ?>',
-	public_key: '<?php echo $tidioPublicKey ?>',
-	private_key: '<?php echo $tidioPrivateKey ?>',
-	settings: <?php echo json_encode($chatSettings); ?>,
-	ajax_url: '<?php echo admin_url() ?>'
-});
-
-translateDialog.create();
-
-pluginUpgrade.create();
-
-translateDialog.showDialog();
-
-</script>
 
 <?php
 
@@ -87,5 +66,26 @@ if(!TidioPluginUpgrade::getUserAccessKey()){
 <!-- Dialog Overlay -->
 
 <div id="dialog-overlay"></div>
+
+<!-- Le' Script -->
+
+<script>
+
+tidioChatOptions.create({
+	extension_url: '<?php echo $extensionUrl ?>',
+	public_key: '<?php echo $tidioPublicKey ?>',
+	private_key: '<?php echo $tidioPrivateKey ?>',
+	settings: <?php echo json_encode($chatSettings); ?>,
+	ajax_url: '<?php echo admin_url() ?>'
+});
+
+translateDialog.create();
+
+pluginUpgrade.create();
+
+translateDialog.showDialog();
+
+</script>
+
 
 
