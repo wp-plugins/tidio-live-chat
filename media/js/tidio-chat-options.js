@@ -14,17 +14,24 @@ var tidioChatOptions = {
 	
 	ajax_url: null,
 	
+	translate: null,
+	
 	//
 	
 	$iframe: null,
 	
 	create: function(data){
+		
+		// this.api_url = 'http://localhost/tidio_elements_app/public/';
+		
+		//
 				
 		var default_data = {
 			extension_url: null,
 			public_key: null,
 			private_key: null,
 			settings: null,
+			translate: null,
 			ajax_url: null
 		};
 		
@@ -41,6 +48,16 @@ var tidioChatOptions = {
 		this.settings = data.settings;
 
 		this.ajax_url = data.ajax_url;
+		
+		//
+		
+		if(this.settings['translate']){
+			
+			translateDialog.importTranslate(this.settings['translate']);
+			
+			console.log('this.translate', this.settings['translate']);
+			
+		}
 		
 		//
 		
@@ -62,7 +79,7 @@ var tidioChatOptions = {
 		
 		$("#chat-settings-link").on('click', function(){
 			
-			tidioChatOptions.dialogShow('#dialog-settings');
+			tidioDialog.show('#dialog-settings');
 			
 			return false;
 			
@@ -80,105 +97,31 @@ var tidioChatOptions = {
 			
 		});
 		
+		$("#settings-form-translate-link").on('click', function(){
+			
+			tidioDialog.hide('#dialog-settings');
+			
+			translateDialog.showDialog();
+			
+		});
+		
 		//
 		
 		$("#settings-form-base-color-input").minicolors();
 		
 	},
-	
-	// Settings
-	
-	dialogInit: function(){
 		
-		if(this.dialog_init)
-			
-			return false;
-			
-		//
-		
-		this.dialog_init = true;
-		
-		$("body").on('click', function(e){
-			
-			if(!tidioChatOptions.dialog_current){
-				
-				return false;
-				
-			}
-			
-			if(!$(e.target).closest('.frame-dialog').length){
-				
-				tidioChatOptions.dialogHide(tidioChatOptions.dialog_current);
-				
-			}
-						
-			return false;
-			
-		});
-		
-		
-		$('.frame-dialog .btn-close').on('click', function(){
-			
-			if(!tidioChatOptions.dialog_current){
-				
-				return false;
-				
-			}
-			
-			tidioChatOptions.dialogHide(tidioChatOptions.dialog_current);
-			
-			return false;
-			
-		});
-		
-	},
-	
-	dialogShow: function(selector){
-		
-		if(!this.dialog_init){
-			
-			this.dialogInit();
-			
-		}
-
-		if(typeof selector=='string')
-			
-			selector = $(selector);
-			
-		//
-
-		selector.fadeIn('fast').addClass('dialog-active');
-		
-		$("#dialog-overlay").fadeIn('fast');
-		
-		//
-		
-		this.dialog_current = selector;
-		
-	},
-	
-	dialogHide: function(selector){
-		
-		if(typeof selector=='string')
-			
-			selector = $(selector);
-			
-		//
-		
-		selector.fadeOut('fast').removeClass('dialog-active');
-		
-		$("#dialog-overlay").fadeOut('fast');
-		
-	},
-	
 	// Settings Update
 	
 	apiUpdateSettings: function(_func){
 		
-		var xhr_url = 'http://www.tidioelements.com/apiExternalPlugin/updateData?privateKey=' + this.private_key;
-				
+		if(typeof _func!='function')
+			_func = function(){};
+			
 		//
 		
+		var xhr_url = this.api_url + 'apiExternalPlugin/updateData?privateKey=' + this.private_key;
+						
 		var plugin_data = tidioChatOptions.apiDataSerialize('#dialog-settings-form');
 				
 		$.ajax({
@@ -217,6 +160,11 @@ var tidioChatOptions = {
 			api_data[this_name] = this_value;
 			
 		});
+		
+		api_data['translate'] = translateDialog.exportData();
+		
+		
+		//
 		
 		return JSON.stringify(api_data);
 	

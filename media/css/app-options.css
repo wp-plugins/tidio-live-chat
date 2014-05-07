@@ -242,5 +242,55 @@ h2 .settings-link {
 
 .clearfix:before, .clearfix:after { content: "."; display: block; height: 0; overflow: hidden; } .clearfix:after { clear: both; }
 
+/* Translate Form */
+
+#dialog-translate-form {
+	overflow-y: auto;
+	height: 450px;
+}
+
+#dialog-translate-form label {
+	float: left;
+	
+	width: 30%;
+}
+
+#dialog-translate-form input {
+	float: left;
+	width: 60%;
+	margin-left: 5%;
+		
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#dialog-translate-form .e-submit {
+	position: absolute;
+	bottom: 15px;
+}
+
+#dialog-translate .frame-dialog {
+	padding-bottom: 50px;
+}
+
+#settings-form-translate-link {
+	float: left;
+	margin-top: 6px;
+	margin-left: 20px;
+}
+
+/* top logo */
+
+#tidio-top-logo {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	background-image: url('../img/brand-logo.png');
+	display: block;
+	width: 180px;
+	height: 27px;
+}
+
 
 

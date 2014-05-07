@@ -7,15 +7,15 @@ class TidioChatOptions {
 	private $siteUrl;
 	
 	public function __construct(){
-		
+				
 		$this->siteUrl = get_option('siteurl');
-		
+				
 	}
 	
 	public function getChatSettings(){
 
 		$chatSettings = get_option('tidio-chat-settings');
-		
+								
 		if($chatSettings)
 			
 			return json_decode($chatSettings, true);
@@ -27,7 +27,8 @@ class TidioChatOptions {
 			'base_color' => '#2E4255',
 			'online_message' => 'Chat with us',
 			'offline_message' => 'Leave a message',
-			'language' => 'en'
+			'language' => 'en',
+			'translate' => null
 		);
 		
 		update_option('tidio-chat-settings', json_encode($chatSettings));
@@ -40,10 +41,10 @@ class TidioChatOptions {
 	public function getPrivateKey(){
 		
 		$tidioPrivateKey = get_option('tidio-chat-private-key');
-
+		
 		if(empty($tidioPrivateKey)){
 		
-			$tidioPrivateKey = md5(SECURE_AUTH_KEY.'.liveChat');
+			$tidioPrivateKey = md5(SECURE_AUTH_KEY.md5(microtime()).mt_rand(1,1000000000).'.liveChat');
 			
 			update_option('tidio-chat-private-key', $tidioPrivateKey);
 		
@@ -63,7 +64,9 @@ class TidioChatOptions {
 			
 		//
 		
-		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl));
+		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl), array(
+			'pluginData' =>  json_encode($this->chatSettings)
+		));
 
 		$apiData = json_decode($apiData, true);
 		
@@ -74,13 +77,15 @@ class TidioChatOptions {
 			update_option('tidio-chat-public-key', $tidioPublicKey);
 			
 		}
+				
+		//
 		
 		return $tidioPublicKey;
 
 	}
 	
-	private function getContentData($url){
-		
+	private function getContentData($url, $postData = null){
+				
 		$ch = curl_init();
 	
 		curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
@@ -88,7 +93,14 @@ class TidioChatOptions {
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)');
-	
+		
+		if($postData){
+			curl_setopt($ch,CURLOPT_POST, count($postData));
+			curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($postData));
+		}
+		
+		//
+			
 		$data = curl_exec($ch);
 		curl_close($ch);
 		

@@ -3,8 +3,8 @@
 /**
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidioelements.com
- * Description: Tidio Live Chat - a totally free chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds
- * Version: 1.2.1
+ * Description: Free live chat from Tidio Elements
+ * Version: 1.0
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiomobile.com
  * License: GPL2
@@ -85,11 +85,13 @@ class TidioLiveChat {
 		$chatSettings = $_POST['settingsData'];
 		
 		$chatSettings = urldecode($chatSettings);
-				
+		
+		$chatSettings = str_replace("\'", "'", $chatSettings);
+								
 		//
 				
 		update_option('tidio-chat-settings', $chatSettings);
-				
+						
 		$this->ajaxResponse(true, true);
 
 	}
