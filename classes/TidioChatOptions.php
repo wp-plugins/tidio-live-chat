@@ -64,9 +64,15 @@ class TidioChatOptions {
 			
 		//
 		
+		/*
+		
 		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl), array(
 			'pluginData' =>  json_encode($this->chatSettings)
 		));
+		
+		*/
+		
+		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl));
 
 		$apiData = json_decode($apiData, true);
 		

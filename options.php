@@ -42,24 +42,6 @@ wp_enqueue_style('tidio-chat-css' );
 
 ?>
 
-<?php
-
-if(!TidioPluginUpgrade::getUserAccessKey()){
-	
-	require 'views/before-upgrade.php';
-	
-} else if(TidioPluginUpgrade::getUserAccessKey()) {
-	
-	require 'views/after-upgrade.php';
-	
-}
-
-?>
-
-<!-- Dialog Overlay -->
-
-<div id="dialog-overlay"></div>
-
 <!-- Le' Script -->
 
 <script src="<?php echo $extensionUrl ?>/media/js/plugin-minicolors.js"></script>
@@ -88,5 +70,22 @@ translateDialog.showDialog();
 
 </script>
 
+<?php
+
+if(!TidioPluginUpgrade::getUserAccessKey()){
+	
+	require 'views/before-upgrade.php';
+	
+} else if(TidioPluginUpgrade::getUserAccessKey()) {
+	
+	require 'views/after-upgrade.php';
+	
+}
+
+?>
+
+<!-- Dialog Overlay -->
+
+<div id="dialog-overlay"></div>
 
 
