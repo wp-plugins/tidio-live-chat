@@ -1,5 +1,5 @@
 === Free Live Chat by Tidio Elements ===
-Contributors: MatthewTidio
+Contributors: tytus-tytus
 Tags: tidio, chat, chat online, chat software, customer support, free chat, widget, live chat, chat online, admin, zopim, olark
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
