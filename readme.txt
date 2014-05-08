@@ -22,6 +22,7 @@ which it won’t be hard for you to:
 * Adjust the chat’s color scheme to your website
 * Edit the operator’s info and upload a thumbnail
 * Set up automated messages sent to users after a website activity
+* Multilanguage
 
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
 
