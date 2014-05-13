@@ -1,6 +1,6 @@
 <?php
 
-define('TIDIO_CHAT_PLUGIN_URL', content_url().'/plugins/tidio-chat/');
+define('TIDIO_CHAT_PLUGIN_URL', content_url().'/plugins/tidio-live-chat/');
 
 //
 

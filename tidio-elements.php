@@ -37,7 +37,7 @@ class TidioLiveChat {
 	public function addAdminMenuLink(){
 		
         $optionPage = add_menu_page(
-                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url().'/plugins/tidio-chat/media/img/icon.png'
+                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url().'/plugins/tidio-live-chat/media/img/icon.png'
         );
         $this->pageId = $optionPage;
 		
