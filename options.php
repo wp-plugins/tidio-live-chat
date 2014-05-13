@@ -1,5 +1,9 @@
 <?php
 
+define('TIDIO_CHAT_PLUGIN_URL', content_url().'/plugins/tidio-chat/');
+
+//
+
 require "classes/TidioPluginUpgrade.php";
 
 $tidioPluginUpgrade = new TidioPluginUpgrade();
@@ -30,8 +34,6 @@ $tidioPrivateKey = $tidioChatOptions->getPrivateKey();
 
 $chatSettings = $tidioChatOptions->getChatSettings();
 
-$extensionUrl = plugins_url(basename(__DIR__).'/');
-
 $compatibilityPlugin = TidioPluginsScheme::compatibilityPlugin('chat');
 
 //
@@ -43,11 +45,11 @@ wp_enqueue_style('tidio-chat-css' );
 ?>
 
 <script> var $ = jQuery; </script>
-<script src="<?php echo $extensionUrl ?>/media/js/plugin-minicolors.js"></script>
-<script src="<?php echo $extensionUrl ?>/media/js/tidio-dialog.js"></script>
-<script src="<?php echo $extensionUrl ?>/media/js/plugin-upgrade.js"></script>
-<script src="<?php echo $extensionUrl ?>/media/js/translate-dialog.js"></script>
-<script src="<?php echo $extensionUrl ?>/media/js/tidio-chat-options.js"></script>
+<script src="<?php echo TIDIO_CHAT_PLUGIN_URL ?>media/js/plugin-minicolors.js"></script>
+<script src="<?php echo TIDIO_CHAT_PLUGIN_URL ?>media/js/tidio-dialog.js"></script>
+<script src="<?php echo TIDIO_CHAT_PLUGIN_URL ?>media/js/plugin-upgrade.js"></script>
+<script src="<?php echo TIDIO_CHAT_PLUGIN_URL ?>media/js/translate-dialog.js"></script>
+<script src="<?php echo TIDIO_CHAT_PLUGIN_URL ?>media/js/tidio-chat-options.js"></script>
 
 <?php
 
@@ -72,7 +74,7 @@ if(!TidioPluginUpgrade::getUserAccessKey()){
 <script>
 
 tidioChatOptions.create({
-	extension_url: '<?php echo $extensionUrl ?>',
+	extension_url: '<?php echo TIDIO_CHAT_PLUGIN_URL ?>',
 	public_key: '<?php echo $tidioPublicKey ?>',
 	private_key: '<?php echo $tidioPrivateKey ?>',
 	settings: <?php echo json_encode($chatSettings); ?>,

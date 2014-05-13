@@ -4,7 +4,7 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidioelements.com
  * Description: Free live chat from Tidio Elements
- * Version: 1.3
+ * Version: 1.3.1
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiomobile.com
  * License: GPL2
@@ -37,7 +37,7 @@ class TidioLiveChat {
 	public function addAdminMenuLink(){
 		
         $optionPage = add_menu_page(
-                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), plugins_url(basename(__DIR__) . '/media/img/icon.png')
+                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url().'/plugins/tidio-chat/media/img/icon.png'
         );
         $this->pageId = $optionPage;
 		
