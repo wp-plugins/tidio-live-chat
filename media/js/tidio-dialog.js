@@ -14,16 +14,14 @@ var tidioDialog = {
 		
 		$("body").on('click', function(e){
 			
-			if(!tidioDialog.dialog_current){
-				
-				return false;
-				
-			}
+			if(tidioDialog.dialog_current){
+							
+				if(!$(e.target).closest('.frame-dialog').length){
+					
+					tidioDialog.hide(tidioDialog.dialog_current);
+					
+				}
 			
-			if(!$(e.target).closest('.frame-dialog').length){
-				
-				tidioDialog.hide(tidioDialog.dialog_current);
-				
 			}
 						
 			return false;
@@ -82,6 +80,8 @@ var tidioDialog = {
 		selector.fadeOut('fast').removeClass('dialog-active');
 		
 		$("#dialog-overlay").fadeOut('fast');
+		
+		tidioDialog.dialog_current = false;
 		
 	}	
 };

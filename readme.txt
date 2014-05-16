@@ -55,6 +55,9 @@ The Chat is totally free with no hidden charges.
 
 == Changelog ==
 
+= 1.3.2 =
+* (fixed) disable click
+
 = 1.3.1 =
 * (fixed) error with location files using __DIR__
 

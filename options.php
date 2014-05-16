@@ -85,8 +85,6 @@ translateDialog.create();
 
 pluginUpgrade.create();
 
-translateDialog.showDialog();
-
 </script>
 
 
