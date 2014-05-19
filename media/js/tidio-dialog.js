@@ -20,12 +20,10 @@ var tidioDialog = {
 					
 					tidioDialog.hide(tidioDialog.dialog_current);
 					
-				}
+				} 
 			
 			}
-						
-			return false;
-			
+									
 		});
 		
 		

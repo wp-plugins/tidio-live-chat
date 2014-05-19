@@ -34,8 +34,6 @@ $tidioPrivateKey = $tidioChatOptions->getPrivateKey();
 
 $chatSettings = $tidioChatOptions->getChatSettings();
 
-$compatibilityPlugin = TidioPluginsScheme::compatibilityPlugin('chat');
-
 //
 
 wp_register_style('tidio-chat-css', plugins_url('media/css/app-options.css', __FILE__) );

@@ -1,6 +1,6 @@
 === Free Live Chat by Tidio Elements ===
 Contributors: tytus-tytus
-Tags: admin, tidio, tidio chat, Chat, chat button, chat link, chat live, chat module, chat online, chat operator, chat plugin, chat support, chat tool, Chat Widget, chatlive, comments, customer chat, customer support, free chat, free live chat, free live support, google, help desk chat, helpdesk, helpdesk chat, IM Chat, image, images, links, live chat, live chat button, live chat link, live chat plugin, live chat software, live chat support, live chat widget, live customer support, live help, live help button, live help plugin, live help widget, live support, live support chat, live support plugin, live support software, live support widget, livechat, livechat widget, livehelp, livehelp button, livehelp software, olark, online chat, online customer chat, online customer support, online live chat, online support, page, plugin, plugin chat, Post, posts, provide support, sales automation, sidebar, sidebar chat, support chat, support software, twitter, visitor chat, visitor tracking, web chat, widget, zendesk, Zopim
+Tags: tidio, chat, chat online, chat software, customer support, free chat, widget, live chat, chat online, admin, zopim, olark, wp chat
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -16,14 +16,14 @@ signing up - integrates with your website in less than 20 seconds
 Do you need a simple and functional Chat for your website? We are pleased to 
 present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
 which it won’t be hard for you to:
-                                        
+
 * See who visits your website (which browser they use, and what country they are from)
 * Talk to the users of your website
 * Adjust the chat’s color scheme to your website
 * Edit the operator’s info and upload a thumbnail
 * Set up automated messages sent to users after a website activity
 * Multilanguage
-                                
+
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
 
 = How does it work? =
@@ -56,7 +56,7 @@ The Chat is totally free with no hidden charges.
 == Changelog ==
 
 = 1.3.2 =
-* (fixed) disable click
+* Added compatibility with other Tidio plugins
 
 = 1.3.1 =
 * (fixed) error with location files using __DIR__

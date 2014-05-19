@@ -64,15 +64,11 @@ class TidioChatOptions {
 			
 		//
 		
-		/*
-		
-		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl), array(
+		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin', array(
+			'privateKey' => $this->getPrivateKey(),
+			'url' => $this->siteUrl,
 			'pluginData' =>  json_encode($this->chatSettings)
 		));
-		
-		*/
-		
-		$apiData = $this->getContentData($this->apiHost.'apiExternalPlugin/accessPlugin?privateKey='.$this->getPrivateKey().'&url='.urlencode($this->siteUrl));
 
 		$apiData = json_decode($apiData, true);
 		
@@ -90,7 +86,11 @@ class TidioChatOptions {
 
 	}
 	
-	private function getContentData($url, $postData = null){
+	private function getContentData($url, $postData = array()){
+			
+		$postData['_ip'] = $_SERVER['REMOTE_ADDR'];
+			
+		//	
 				
 		$ch = curl_init();
 	
@@ -100,7 +100,7 @@ class TidioChatOptions {
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)');
 		
-		if($postData){
+		if(!empty($postData)){
 			curl_setopt($ch,CURLOPT_POST, count($postData));
 			curl_setopt($ch,CURLOPT_POSTFIELDS, http_build_query($postData));
 		}

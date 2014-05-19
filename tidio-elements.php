@@ -26,7 +26,7 @@ class TidioLiveChat {
 				
 		add_action('admin_menu', array($this, 'addAdminMenuLink'));
 		
-		add_action('wp_enqueue_scripts', array($this, 'enqueueScript'));
+		add_action('init', array($this, 'addCode'));
 			 
 		add_action("wp_ajax_tidio_chat_settings_update", array($this, "ajaxPageSettingsUpdate"));	 
 			 
@@ -52,24 +52,65 @@ class TidioLiveChat {
 	
 	// Enqueue Script
 	
-	public function enqueueScript(){
-
-		$iCanUseThisPlugin = TidioPluginsScheme::usePlugin('chat');
+	public function addCode(){
 		
-		if(!$iCanUseThisPlugin){
-						
+		if(is_admin()){
 			return false;
-			
 		}
+		
+		//
 		
 		$tidioPublicKey = get_option('tidio-chat-public-key');
-				
-        if(!empty($tidioPublicKey)){
-			
-            wp_enqueue_script('tidio-chat',  $this->scriptUrl.$tidioPublicKey.'.js', array(), '1.1', false);
-			
+		
+		if(empty($tidioPublicKey)){
+			TidioPluginsScheme::insertCode('chat', '');
+			return false;
 		}
-
+		
+		//
+		
+		$html = '';
+				
+		//
+				
+		$chatSettings = $this->getChatSettings();
+										
+		//
+		
+		$html .= '<script type="text/javascript" src="//www.tidioelements.com/uploads/addons/addon-chat-en.js"></script>';
+		
+		$html .= "<script type=\"text/javascript\">";
+			
+		$html .= "if(typeof tidioElementsLang!='object'){ var tidioElementsLang = {}; }";
+			
+		if(!empty($chatSettings['translate'])){
+			$html .= "tidioElementsLang['pluginChat'] = ".json_encode($chatSettings['translate']).";";
+		}
+			
+		$html .= "</script>";
+		
+		$html .= '<style media="screen">';
+		$html .= '#tidio-plugin-container-right-bottom .tidio-layout-popup, #tidio-chat-popup .tidio-layout-popup { background-color: '.$chatSettings['base_color'].' !important;color: #ffffff; }';
+		$html .= '</style>';
+		
+		//
+						
+		$html .=
+		'<script type="text/javascript">'.
+		"if(typeof tidioElementsAddons!='object'){ var tidioElementsAddons = []; }".
+		"tidioElementsAddons.push(".json_encode(array(
+			'type' => 'chat',
+			'addon_data' => array(
+				'email' => $chatSettings['email'],
+				'button_label' => $chatSettings['online_message'],
+				'base_color' => $chatSettings['base_color'],
+				'project_public_key' => $tidioPublicKey
+			)
+		)).");".
+		'</script>';
+		
+		TidioPluginsScheme::insertCode('chat', $html);
+		
 	}
 	
 	// Ajax Pages
@@ -105,6 +146,28 @@ class TidioLiveChat {
 		
 		exit;
 			
+	}
+	
+	// Chat Settings
+	
+	private function getChatSettings(){
+
+		$chatSettings = get_option('tidio-chat-settings');
+		
+		if(!$chatSettings){
+			
+			return array(
+				'email' => get_option('email'),
+				'base_color' => '#32475c',
+				'online_message' => 'Chat with us!'
+			);
+			
+		}
+		
+		$chatSettings = json_decode($chatSettings, true);
+		
+		return $chatSettings;
+
 	}
 }
 
