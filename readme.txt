@@ -1,6 +1,6 @@
 === Free Live Chat by Tidio Elements ===
 Contributors: tytus-tytus
-Tags: tidio, chat, chat online, customer support, free chat, chat software, widget, live chat, admin, chat online, zopim, olark, wp chat
+Tags: tidio, chat, chat online, customer support, free chat, widget, chat software, live chat, admin, chat online, zopim, olark, wp chat
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
