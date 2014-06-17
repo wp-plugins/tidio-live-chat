@@ -54,7 +54,9 @@ var tidioChatOptions = {
 		if(this.settings['translate']){
 			
 			translateDialog.importTranslate(this.settings['translate']);
-						
+			
+			console.log('this.translate', this.settings['translate']);
+			
 		}
 		
 		//
@@ -83,7 +85,7 @@ var tidioChatOptions = {
 			
 		});
 		
-		$("#dialog-settings").on('submit', function(){
+		$("#dialog-settings-form-submit").on('click', function(){
 			
 			$("#dialog-settings-form-submit").text('loading...');
 			
@@ -93,8 +95,6 @@ var tidioChatOptions = {
 				
 			});
 			
-			return false;
-			
 		});
 		
 		$("#settings-form-translate-link").on('click', function(){
@@ -102,8 +102,6 @@ var tidioChatOptions = {
 			tidioDialog.hide('#dialog-settings');
 			
 			translateDialog.showDialog();
-			
-			return false;
 			
 		});
 		
@@ -120,7 +118,7 @@ var tidioChatOptions = {
 		if(typeof _func!='function')
 			_func = function(){};
 			
-		/*
+		//
 		
 		var xhr_url = this.api_url + 'apiExternalPlugin/updateData?privateKey=' + this.private_key;
 						
@@ -138,18 +136,14 @@ var tidioChatOptions = {
 			
 		});
 		
-		*/
-
-		var plugin_data = tidioChatOptions.apiDataSerialize('#dialog-settings-form');
-
+		//
+		
 		$.ajax({
 			url: this.ajax_url + 'admin-ajax.php?action=tidio_chat_settings_update',
 			type: 'POST',
 			data: {
 				settingsData: encodeURI(plugin_data)
 			}
-		}).done(function(){
-			_func();
 		});
 		
 	},

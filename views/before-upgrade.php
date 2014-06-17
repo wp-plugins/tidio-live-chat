@@ -1,22 +1,14 @@
 <div class="wrap">
-
-    <div id="powered-by">
-    	<a href="http://www.tidioelements.com/?utm_source=wordpress_chat&utm_medium=inside_form&utm_campaign=wordpress_plugin" target="_blank"></a>
-        <div class="left">
-            See how <strong>better your website</strong> could <strong>look</strong> like!
-        </div>
-        <div id="tidio-top-logo"></div>
-        <div class="clearfix"></div>
-        <form action="http://www.tidioelements.com/editor-test" method="get" target="_blank">
-            <input type="text" name="url" placeholder="http:/www.yourwebsite.com" value="<?php echo site_url(); ?>" />
-            <input type="hidden" name="utm_source" value="wordpress_chat" />
-            <input type="hidden" name="utm_medium" value="inside_form"/>
-            <input type="hidden" name="utm_campaign" value="wordpress_plugin"/>
-            <input type="submit" name="submit" value="OK"/>
-        </form>
-    </div>
+	
+	<a href="http://www.tidioelements.com/?utm_source=wordpress&utm_medium=cpc&utm_campaign=plugin_inside&utm_content=chat" id="tidio-top-logo"></a>
 
 	<h2>Tidio Live Chat<a href="#" id="chat-settings-link" class="settings-link">settings</a></h2>
+
+    <?php if(!$compatibilityPlugin): ?>
+        
+    <div class="alert alert-info" style="margin: 10px 0px 15px;">We're sorry, this plugin is not compatible with other Tidio Elements plugins - that is why it cannot be displayed on your site. To take advantage of all the possibilities our platform offers, please install <a href="http://wordpress.org/plugins/tidio-elements-integrator/" target="_blank" style="font-weight: bold;">Tidio Elements Integrator</a> plugin or uninstall the other plugins.</div>    
+    
+    <?php endif; ?>
 
 	<!--<p><a href="#" class="tidio-plugin-upgrade-link">click to upgrade</a></p>-->
     
@@ -57,7 +49,7 @@
                 <input type="text" value="" name="online_message" id="settings-form-online-message-input" />
             </div>
 
-            <div class="e clearfix" style="display: none;">
+            <div class="e clearfix">
                 <label>Offline Message:</label>
                 <input type="text" value="" name="offline_message" id="settings-form-offline-message-input" />
             </div>

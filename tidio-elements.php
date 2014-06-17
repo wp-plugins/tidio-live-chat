@@ -2,173 +2,103 @@
 
 /**
  * Plugin Name: Tidio Chat
- * Plugin URI: http://www.tidioelements.com
+ * Plugin URI: http://www.tidiochat.com
  * Description: Free live chat from Tidio Elements
- * Version: 1.3.2
+ * Version: 2.0
  * Author: Tidio Ltd.
- * Author URI: http://www.tidiomobile.com
+ * Author URI: http://www.tidiochat.com
  * License: GPL2
  */
- 
-if(!class_exists('TidioPluginsScheme')){
-	 
-	 require "classes/TidioPluginsScheme.php";
-	 
-} 
- 
 class TidioLiveChat {
-	
-	private $scriptUrl = '//tidioelements.com/uploads/redirect-plugin/';
-	
-	private $pageId = '';
-		
-	public function __construct() {
-				
-		add_action('admin_menu', array($this, 'addAdminMenuLink'));
-		
-		add_action('init', array($this, 'addCode'));
-			 
-		add_action("wp_ajax_tidio_chat_settings_update", array($this, "ajaxPageSettingsUpdate"));	 
-			 
-	}
-	
-	// Menu Positions
-	
-	public function addAdminMenuLink(){
-		
+
+    private $scriptUrl = '//www.tidiochat.com/redirect/';
+
+    public function __construct() {
+        add_action('admin_menu', array($this, 'addAdminMenuLink'));
+        add_action('admin_footer', array($this, 'adminJS'));
+
+        self::getPrivateKey();
+        
+        if(!is_admin()){
+            add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
+        }
+//
+//        if (!is_admin()) {
+//            wp_enqueue_script('tidio-chat', 'https://www.tidiochat.com/uploads/redirect/' . self::getPublicKey() . '.js', array(), '1.0.0', true);
+//        }
+    }
+    
+    // Front End Scripts
+    
+    public function enqueueScripts(){
+            wp_enqueue_script('tidio-chat', 'https://www.tidiochat.com/uploads/redirect/' . self::getPublicKey() . '.js', array(), '1.0.0', true);
+    }
+
+    // Admin JavaScript
+
+    public function adminJS() {
+
+        echo "<script> jQuery('a[href=\"admin.php?page=tidio-chat\"]').attr('href', 'http://external.tidiochat.com/access?privateKey=" . self::getPrivateKey() . "').attr('target', '_blank') </script>";
+    }
+
+    // Menu Pages
+
+    public function addAdminMenuLink() {
+
         $optionPage = add_menu_page(
-                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url().'/plugins/tidio-live-chat/media/img/icon.png'
+                'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url() . '/plugins/tidio-live-chat/media/img/icon.png'
         );
-        $this->pageId = $optionPage;
-		
-	}
-	
+
+        // jQuery('a[href="admin.php?page=tidio-chat"]').attr('href', 'http://www.google.com').attr('target', '_blank')
+    }
+
     public function addAdminPage() {
         // Set class property
         $dir = plugin_dir_path(__FILE__);
         include $dir . 'options.php';
     }
 
-	
-	// Enqueue Script
-	
-	public function addCode(){
-		
-		if(is_admin()){
-			return false;
-		}
-		
-		//
-		
-		$tidioPublicKey = get_option('tidio-chat-public-key');
-		
-		if(empty($tidioPublicKey)){
-			TidioPluginsScheme::insertCode('chat', '');
-			return false;
-		}
-		
-		//
-		
-		$html = '';
-				
-		//
-				
-		$chatSettings = $this->getChatSettings();
-										
-		//
-		
-		$html .= '<script type="text/javascript" src="//www.tidioelements.com/uploads/addons/addon-chat-en.js"></script>';
-		
-		$html .= "<script type=\"text/javascript\">";
-			
-		$html .= "if(typeof tidioElementsLang!='object'){ var tidioElementsLang = {}; }";
-			
-		if(!empty($chatSettings['translate'])){
-			$html .= "tidioElementsLang['pluginChat'] = ".json_encode($chatSettings['translate']).";";
-		}
-			
-		$html .= "</script>";
-		
-		$html .= '<style media="screen">';
-		$html .= '#tidio-plugin-container-right-bottom .tidio-layout-popup, #tidio-chat-popup .tidio-layout-popup { background-color: '.$chatSettings['base_color'].' !important;color: #ffffff; }';
-		$html .= '</style>';
-		
-		//
-						
-		$html .=
-		'<script type="text/javascript">'.
-		"if(typeof tidioElementsAddons!='object'){ var tidioElementsAddons = []; }".
-		"tidioElementsAddons.push(".json_encode(array(
-			'type' => 'chat',
-			'addon_data' => array(
-				'email' => $chatSettings['email'],
-				'button_label' => $chatSettings['online_message'],
-				'base_color' => $chatSettings['base_color'],
-				'project_public_key' => $tidioPublicKey
-			)
-		)).");".
-		'</script>';
-		
-		TidioPluginsScheme::insertCode('chat', $html);
-		
-	}
-	
-	// Ajax Pages
-	
-	public function ajaxPageSettingsUpdate(){
+    // Get Private Key
 
-		if(empty($_POST['settingsData'])){
-			
-			$this->ajaxResponse(false, 'ERR_PASSED_DATA');
-			
-		}
-		
-		$chatSettings = $_POST['settingsData'];
-		
-		$chatSettings = urldecode($chatSettings);
-		
-		$chatSettings = str_replace("\'", "'", $chatSettings);
-								
-		//
-				
-		update_option('tidio-chat-settings', $chatSettings);
-						
-		$this->ajaxResponse(true, true);
+    public static function getPrivateKey() {
 
-	}
+        $privateKey = get_option('tidio-chat-external-private-key');
 
-	public function ajaxResponse($status = true, $value = null){
-		
-		echo json_encode(array(
-			'status' => $status,
-			'value' => $value
-		));	
-		
-		exit;
-			
-	}
-	
-	// Chat Settings
-	
-	private function getChatSettings(){
+        if ($privateKey) {
+            return $privateKey;
+        }
 
-		$chatSettings = get_option('tidio-chat-settings');
-		
-		if(!$chatSettings){
-			
-			return array(
-				'email' => get_option('email'),
-				'base_color' => '#32475c',
-				'online_message' => 'Chat with us!'
-			);
-			
-		}
-		
-		$chatSettings = json_decode($chatSettings, true);
-		
-		return $chatSettings;
+        @$data = file_get_contents('http://www.tidiochat.com/access/create?url=http://www.wiktormed.pl&platform=wordpress&email=tytus@tidio.net');
+        if (!$data) {
+            update_option('tidio-chat-external-private-key', 'false');
+            return false;
+        }
 
-	}
+        @$data = json_decode($data, true);
+        if (!$data || !$data['status']) {
+            update_option('tidio-chat-external-private-key', 'false');
+            return false;
+        }
+
+        update_option('tidio-chat-external-private-key', $data['value']['private_key']);
+        update_option('tidio-chat-external-public-key', $data['value']['public_key']);
+
+        return $data['value']['private_key'];
+    }
+
+    public static function getPublicKey() {
+
+        $publicKey = get_option('tidio-chat-external-public-key');
+
+        if ($publicKey) {
+            return $publicKey;
+        }
+
+        self::getPrivateKey();
+
+        return get_option('tidio-chat-external-public-key');
+    }
+
 }
 
 $tidioLiveChat = new TidioLiveChat();

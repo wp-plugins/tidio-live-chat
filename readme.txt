@@ -55,6 +55,9 @@ The Chat is totally free with no hidden charges.
 
 == Changelog ==
 
+= 2.0 =
+* Compatibility with tidiochat.com
+
 = 1.3.2 =
 * Added compatibility with other Tidio plugins
 
