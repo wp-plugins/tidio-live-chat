@@ -68,7 +68,7 @@ class TidioLiveChat {
             return $privateKey;
         }
 
-        @$data = file_get_contents('http://www.tidiochat.com/access/create?url=http://www.wiktormed.pl&platform=wordpress&email=tytus@tidio.net');
+        @$data = file_get_contents('http://www.tidiochat.com/access/create?url='.site_url().'&platform=wordpress&email='.get_option('admin_email'));
         if (!$data) {
             update_option('tidio-chat-external-private-key', 'false');
             return false;
