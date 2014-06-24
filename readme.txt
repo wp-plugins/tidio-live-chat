@@ -19,33 +19,13 @@ present you with Tidio Live Chat - amazingly easy to use live chat.
 = Meet up the Tidio Chat =
 And start to talk with your clients!
 
-= Features =
-
-= You can see who is visiting your website! =
-Thanks to Tidio Chat you get a complete list of users which are currently visiting your website - you can check which microsite they found interesing, how much time they spent there and, what is the most crucial, you can write them while they are using your website!
-
-= Multi-language Support =
-Is your site multilingual? Great! Implementation of Tidio Chat shouldn’t be any problem, as our product is suitable for 140 languages and at any time you can add each of it. What is more Tidio Chat is sensing which language your user is writing in and showing chat in this language!
-
-= Fit your color scheme =
-We understand how important personalization is, especially as to chat which is a crucial service for your business. That’s why we have prepared the array of configurations allowing you to fit each element of chat to your own needs.
-
-= You can see what the user is writing =
-Through Tidio Chat you have a live preview of what your user is going to write. Now you will know what exactly he or she wish, are they writing or not.
-
-= Automatic messages =
-Did you know that sending messages like “ Hello, how can we help you?” by the chat is increasing the chance of conversation up to 400%? Because of that we have prepared a special feature which let you to send your users automatic messages. When your users write you, after the specified time you will get a notification.
-
-= Offline form =
-If you want to be online at chat, the only thing you need to do is turning on your computer. Thanks to our special plugin, written for Google Chrome, in the moment when your user is writing to you, you get a notification. Click on it and you will be redirected to control panel, and then you can immediately answer your client.
-
-= Mobile ready =
-100% suited for mobile devices! While enjoying your website by mobile phone or tablet, user can exploit all its features without any problem.
-
-= Offline messages =
-If you want to be online at chat, the only thing you need to do is turning on your computer. Thanks to our special plugin, written for Google Chrome, in the moment when your user is writing to you, you get a notification. Click on it and you will be redirected to control panel, and then you can immediately answer your client.           
-
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
+
+= Features =
+* <b>You can see who is visiting your website!</b> - Thanks to Tidio Chat you get a complete list of users which are currently visiting your website - you can check which microsite they found interesing, how much time they spent there and, what is the most crucial, you can write them while they are using your website!
+* <b>Multi-language Support</b> - Is your site multilingual? Great! Implementation of Tidio Chat shouldn’t be any problem, as our product is suitable for 140 languages and at any time you can add each of it. What is more Tidio Chat is sensing which language your user is writing in and showing chat in this language!
+* <b>Fit your color scheme</b> - We understand how important personalization is, especially as to chat which is a crucial service for your business. That’s why we have prepared the array of configurations allowing you to fit each element of chat to your own needs.
+* <b>You can see what the user is writing</b> - Through Tidio Chat you have a live preview of what your user is going to write. Now you will know what exactly he or she wish, are they writing or not.
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
