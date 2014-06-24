@@ -20,9 +20,6 @@ Do you need a simple and functional Chat for your website? We are pleased to pre
 * Edit the operator’s info and upload a thumbnail
 * Set up automated messages sent to users after a website activity
 * Multilanguage
-* Offline messages
-* Support for mobile devices
-* Offline form
 
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
 
