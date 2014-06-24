@@ -1,7 +1,7 @@
 === Free Live Chat by Tidio Elements ===
 Contributors: tytus-tytus
-Tags: admin, Chat, chat module, chat live, chat button, chat link, chat operator, chat online, tidio, chat plugin, chat support, Chat Widget, chatlive, chat tool, comments, contact us, customer chat, free chat, free live chat, free live support, google, help desk chat, helpdesk, helpdesk chat, image, images, links, live chat, live chat button, live chat link, live chat plugin, live chat software, live chat support, live chat widget, live customer service, live customer support, live help, live help button, live help plugin, live help widget, live support, live support chat, live support plugin, live support software, live support widget, livechat, livechat widget, livehelp, livehelp button, livehelp software, olark, online chat, online customer chat, online customer support, online live chat, online support, page, plugin, plugin chat, tidio elements, Post, posts, provide support, sidebar, sidebar chat, support chat, support software, twitter, visitor chat, web chat, widget, Zopim, zendesk
-Donate link: http://www.tidioelements.com/
+Tags: admin, chat, live chat, tidio, widget, free live chat, zopim, post, plugin, admin, facebook, livechat
+Donate link: http://www.tidiochat.com/
 Requires at least: 3.4
 Tested up to: 3.9
 Stable tag: trunk
@@ -14,15 +14,36 @@ signing up - integrates with your website in less than 20 seconds
 == Description ==
                         
 Do you need a simple and functional Chat for your website? We are pleased to 
-present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
-which it won’t be hard for you to:
-                
-* See who visits your website (which browser they use, and what country they are from)
-* Talk to the users of your website
-* Adjust the chat’s color scheme to your website
-* Edit the operator’s info and upload a thumbnail
-* Set up automated messages sent to users after a website activity
-* Multilanguage
+present you with Tidio Live Chat - amazingly easy to use live chat.
+
+= Meet up the Tidio Chat =
+And start to talk with your clients!
+
+= Features =
+
+= You can see who is visiting your website! =
+Thanks to Tidio Chat you get a complete list of users which are currently visiting your website - you can check which microsite they found interesing, how much time they spent there and, what is the most crucial, you can write them while they are using your website!
+
+= Multi-language Support =
+Is your site multilingual? Great! Implementation of Tidio Chat shouldn’t be any problem, as our product is suitable for 140 languages and at any time you can add each of it. What is more Tidio Chat is sensing which language your user is writing in and showing chat in this language!
+
+= Fit your color scheme =
+We understand how important personalization is, especially as to chat which is a crucial service for your business. That’s why we have prepared the array of configurations allowing you to fit each element of chat to your own needs.
+
+= You can see what the user is writing =
+Through Tidio Chat you have a live preview of what your user is going to write. Now you will know what exactly he or she wish, are they writing or not.
+
+= Automatic messages =
+Did you know that sending messages like “ Hello, how can we help you?” by the chat is increasing the chance of conversation up to 400%? Because of that we have prepared a special feature which let you to send your users automatic messages. When your users write you, after the specified time you will get a notification.
+
+= Offline form =
+If you want to be online at chat, the only thing you need to do is turning on your computer. Thanks to our special plugin, written for Google Chrome, in the moment when your user is writing to you, you get a notification. Click on it and you will be redirected to control panel, and then you can immediately answer your client.
+
+= Mobile ready =
+100% suited for mobile devices! While enjoying your website by mobile phone or tablet, user can exploit all its features without any problem.
+
+= Offline messages =
+If you want to be online at chat, the only thing you need to do is turning on your computer. Thanks to our special plugin, written for Google Chrome, in the moment when your user is writing to you, you get a notification. Click on it and you will be redirected to control panel, and then you can immediately answer your client.           
 
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
 
