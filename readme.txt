@@ -13,19 +13,18 @@ signing up - integrates with your website in less than 20 seconds
 
 == Description ==
                         
-Do you need a simple and functional Chat for your website? We are pleased to 
-present you with Tidio Live Chat - amazingly easy to use live chat.
-
-= Meet up the Tidio Chat =
-And start to talk with your clients!
+Do you need a simple and functional Chat for your website? We are pleased to present you with Tidio Live Chat - amazingly easy to use live chat, thanks to which it won’t be hard for you to:
+* See who visits your website (which browser they use, and what country they are from)
+* Talk to the users of your website
+* Adjust the chat’s color scheme to your website
+* Edit the operator’s info and upload a thumbnail
+* Set up automated messages sent to users after a website activity
+* Multilanguage
+* Offline messages
+* Support for mobile devices
+* Offline form
 
 [youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
-
-= Features =
-* <b>You can see who is visiting your website!</b> - Thanks to Tidio Chat you get a complete list of users which are currently visiting your website - you can check which microsite they found interesing, how much time they spent there and, what is the most crucial, you can write them while they are using your website!
-* <b>Multi-language Support</b> - Is your site multilingual? Great! Implementation of Tidio Chat shouldn’t be any problem, as our product is suitable for 140 languages and at any time you can add each of it. What is more Tidio Chat is sensing which language your user is writing in and showing chat in this language!
-* <b>Fit your color scheme</b> - We understand how important personalization is, especially as to chat which is a crucial service for your business. That’s why we have prepared the array of configurations allowing you to fit each element of chat to your own needs.
-* <b>You can see what the user is writing</b> - Through Tidio Chat you have a live preview of what your user is going to write. Now you will know what exactly he or she wish, are they writing or not.
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
