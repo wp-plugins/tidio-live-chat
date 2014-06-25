@@ -1,6 +1,6 @@
 === Free Live Chat by Tidio Elements ===
 Contributors: tytus-tytus
-Tags: admin, Chat, free live chat, Facebook, live chat, livechat, plugin, Post, tidio, widget, Zopim
+Tags: admin, free live chat, Chat, Facebook, live chat, livechat, plugin, Post, tidio, widget, Zopim
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
