@@ -55,6 +55,12 @@ The Chat is totally free with no hidden charges.
 
 == Changelog ==
 
+= 2.0.2 =
+* (added) support to sites with disabled allow_url_fopen flag 
+
+= 2.0.1 =
+* (added) new icon
+
 = 2.0 =
 * Compatibility with tidiochat.com
 
