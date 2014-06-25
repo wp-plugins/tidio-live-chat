@@ -9,6 +9,7 @@
  * Author URI: http://www.tidiochat.com
  * License: GPL2
  */
+ 
 class TidioLiveChat {
 
     private $scriptUrl = '//www.tidiochat.com/redirect/';
@@ -24,11 +25,23 @@ class TidioLiveChat {
         }
         
         add_action('deactivate_'.plugin_basename(__FILE__), array($this, 'uninstall'));	
-//
-//        if (!is_admin()) {
-//            wp_enqueue_script('tidio-chat', 'https://www.tidiochat.com/uploads/redirect/' . self::getPublicKey() . '.js', array(), '1.0.0', true);
-//        }
+		
+		//
+		
+		$this->debugMode();
+
     }
+	
+	// Debug Mode
+	
+	private function debugMode(){
+				
+		if(is_admin() && !empty($_GET['tidioDebugMode'])){
+			phpinfo();
+			exit;
+		}
+		
+	}
     
     // Front End Scripts
     
@@ -50,8 +63,6 @@ class TidioLiveChat {
         $optionPage = add_menu_page(
                 'Live Chat', 'Live Chat', 'manage_options', 'tidio-chat', array($this, 'addAdminPage'), content_url() . '/plugins/tidio-live-chat/media/img/icon.png'
         );
-
-        // jQuery('a[href="admin.php?page=tidio-chat"]').attr('href', 'http://www.google.com').attr('target', '_blank')
     }
 
     public function addAdminPage() {
@@ -63,8 +74,8 @@ class TidioLiveChat {
     // Uninstall
 	
     public function uninstall(){
-	delete_option('tidio-chat-external-public-key');
-	delete_option('tidio-chat-external-private-key');
+		delete_option('tidio-chat-external-public-key');
+		delete_option('tidio-chat-external-private-key');
     }
 
     // Get Private Key
@@ -94,6 +105,8 @@ class TidioLiveChat {
 
         return $data['value']['private_key'];
     }
+	
+	// Get Public Key
 
     public static function getPublicKey() {
 
