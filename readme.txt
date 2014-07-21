@@ -1,4 +1,4 @@
-=== Tidio Live Chat ===
+=== Free Live Chat by Tidio ===
 Contributors: tytus-tytus
 Tags: free live chat, plugin, live chat, admin, chat, facebook, livechat, post, tidio, widget, post, posts, twitter
 Donate link: http://www.tidioelements.com/
