@@ -101,8 +101,8 @@ class TidioLiveChat {
     // Uninstall
 	
     public function uninstall(){
-		delete_option('tidio-chat-external-public-key');
-		delete_option('tidio-chat-external-private-key');
+		//delete_option('tidio-chat-external-public-key');
+		//delete_option('tidio-chat-external-private-key');
     }
 
     // Get Private Key
