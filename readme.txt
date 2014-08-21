@@ -1,6 +1,6 @@
 === Free Live Chat by Tidio ===
 Contributors: tytus-tytus
-Tags: free live chat, admin, live chat, plugin, chat, facebook, livechat, post, tidio, widget, post, posts, twitter
+Tags: free live chat, admin, plugin, live chat, chat, facebook, livechat, post, tidio, widget, post, posts, twitter
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
 Tested up to: 3.9
@@ -12,7 +12,7 @@ Meet Tidio Live Chat - a free chat for your website. No logging in, no
 signing up - integrates with your website in less than 20 seconds
 
 == Description ==
-                            
+                    
 Do you need a simple and functional Chat for your website? We are pleased to 
 present you with Tidio Live Chat - amazingly easy to use live chat, thanks to 
 which it won’t be hard for you to:
