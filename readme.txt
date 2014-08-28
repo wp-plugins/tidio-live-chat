@@ -24,7 +24,7 @@ which it won’t be hard for you to:
 * Set up automated messages sent to users after a website activity
 * Multilanguage
 
-[youtube https://www.youtube.com/watch?v=fLSyf9ZXhG8]
+[youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
