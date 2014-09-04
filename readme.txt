@@ -24,6 +24,8 @@ which it won’t be hard for you to:
 * Set up automated messages sent to users after a website activity
 * Multilanguage
 
+[youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
+
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
 = How does it work? =
