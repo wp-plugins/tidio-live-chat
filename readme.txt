@@ -24,7 +24,7 @@ which it won’t be hard for you to:
 * Set up automated messages sent to users after a website activity
 * Multilanguage
 
-[youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
+[youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
@@ -32,7 +32,7 @@ will be presented with a list of your website’s users, to whom you can write
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
 
-[youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
+[youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
 
 == Installation ==
 1. Go to WordPress Control Panel
