@@ -54,6 +54,7 @@ The Chat is totally free with no hidden charges.
 
 == Screenshots ==
 1. Admin Panel
+2. Devices
 
 == Changelog ==
 
