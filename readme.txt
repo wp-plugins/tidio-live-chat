@@ -32,6 +32,14 @@ will be presented with a list of your website’s users, to whom you can write
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
 
+= Supported languages =
+* English
+* Polish
+* Portuguese
+* Spanish
+* German (soon)
+* French (soon)
+
 [youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
 
 == Installation ==
