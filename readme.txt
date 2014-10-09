@@ -16,19 +16,21 @@ signing up - integrates with your website in less than 20 seconds
 Tidio Live Chat is an live chat solution, which allows to easily communicate with your customers. It was designed essentially for WordPress community, thus installation comes down only to plugin installation, without logging in or registration. 
 
 = Features =
-*Extremely easy installation, you only need to install plugin and it's done!                 
-*You can see who visits your website! 
-*You can contact any customer which is viewing your site
-*Adjust color scheme to your needs!
-*Supports 140 languages
-*Mobile devices support
-*Live-chat!
+* Extremely easy installation, you only need to install plugin and it's done!                 
+* You can see who visits your website! 
+* You can contact any customer which is viewing your site
+* Adjust color scheme to your needs!
+* Supports 140 languages
+* Mobile devices support
+* Live-chat!
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
 will be presented with a list of your website’s users, to whom you can write 
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
+
+[youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
 
 = Supported languages =
 * English
@@ -37,9 +39,6 @@ visitors will be able to write to you.
 * Spanish
 * German (soon)
 * French (soon)
-
-= Installation =
-[youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
 
 = Promo Video =
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
