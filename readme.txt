@@ -40,7 +40,7 @@ visitors will be able to write to you.
 * German (soon)
 * French (soon)
 
-If you're lacking support of your language, please contact us on email [at] tidio.net
+If you're lacking support of your language, please contact us on contact [at] tidio.net
 
 = Promo Video =
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
