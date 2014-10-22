@@ -35,8 +35,7 @@ visitors will be able to write to you.
 = Supported languages =
 * English
 * Polish
-* Spanish
-* Portuguese (soon)
+* Spanish (soon)
 * German (soon)
 * French (soon)
 
