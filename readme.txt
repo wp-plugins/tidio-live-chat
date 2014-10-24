@@ -1,4 +1,4 @@
-=== Free Live Chat by Tidio ===
+=== Tidio Live Chat ===
 Contributors: tytus-tytus,maciekmp
 Tags: Tags: free live chat, plugin, facebook, admin, live chat, chat, livechat, post, tidio, widget, post, posts, twitter
 Donate link: http://www.tidioelements.com/
@@ -21,7 +21,7 @@ Tidio Live Chat is an live chat solution, which allows to easily communicate wit
 * You can contact any customer which is viewing your site
 * Adjust color scheme to your needs!
 * Supports 140 languages
-* Mobile devices support
+* Mobile devices support (iOS, Android supported)
 * Live-chat!
 
 = How does it work? =
