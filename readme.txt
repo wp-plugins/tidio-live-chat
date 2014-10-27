@@ -64,7 +64,9 @@ The Chat is totally free with no hidden charges.
 
 == Screenshots ==
 1. Admin Panel
-2. Devices
+2. We have dedicated application for iOS, Android, Google Chrome and for operating system such us Windows/OS X
+3. Automatic messages support
+4. Edit view
 
 == Changelog ==
 
