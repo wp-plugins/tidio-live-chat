@@ -57,10 +57,7 @@ If you're lacking support of your language, please contact us on contact [at] ti
 
 = Do I need to sign up in order to use the Chat? =
 No, in order to use the Chat you just need to install the add-on and it’s done! 
-No registration/logging in.
-    
-= Is the Chat free and are there any hidden charges? =
-The Chat is totally free with no hidden charges.
+No registration/logging in.    
 
 == Screenshots ==
 1. Admin Panel
