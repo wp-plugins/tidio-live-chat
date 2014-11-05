@@ -59,6 +59,48 @@ If you're lacking support of your language, please contact us on contact [at] ti
 No, in order to use the Chat you just need to install the add-on and it’s done! 
 No registration/logging in.    
 
+= Can I add infinite number of agents? =
+Yes
+= Is there a way to translate everysingle element of TidioChat? =
+Yes, you can translate all elements of Tidio Chat in control panel
+
+= Can I change the colour of the chat’s widget? =
+Yes, you can change the chat’s appearance according to your needs.
+
+= Do I need to know any programming language to install Tidio Chat? =
+No
+
+= Can I manage TidioChat for two sites, from one control panel? =
+Generally no, but you can switch between projects easily
+
+= If I’ll have multiple agents, is there a way to have a separate avatar for eversingle agent? =
+Yes
+
+= Can I see history of past conversation? =
+Yes, from the history menu tab
+
+= Is there an option to set automatic responds? =
+Basically no, but you can set some automatic messages to start a conversation with customers
+
+= Is there an application for iOS or Android? =
+Yes, but it’s still in beta
+
+= Can I install TidioChat on my plain html site? =
+Yes
+
+= Is there a possibility to start a conversation with client before he even send any message? =
+Yes, you can do it with automatic messages feature
+
+= Can I move the TidioChat widget? =
+Well...Yes, but for now we have 2 positions for chat, but we’ll implement more positions in future
+
+= Can I hide chat’s widget? =
+Yes
+
+= If I’ll be offline, and someone will want to contact me, can he leave me some message? =
+Yes, this message will be emailed to you
+
+
 == Screenshots ==
 1. Admin Panel
 2. We have dedicated application for iOS, Android, Google Chrome and for operating system such us Windows/OS X
