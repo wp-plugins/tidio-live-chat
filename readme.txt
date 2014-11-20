@@ -13,7 +13,7 @@ signing up - integrates with your website in less than 20 seconds
 
 == Description ==
                         
-Tidio Live Chat is an live chat solution, which allows to easily communicate with your customers. It was designed essentially for WordPress community, thus installation comes down only to plugin installation, without logging in or registration. 
+Tidio Live Chat is a live chat solution which allows you to easily communicate with your customers. It is designed essentially for WordPress community, this installation comes down only to plugin installation without logging in or registration.
 
 = Features =
 * Extremely easy installation, you only need to install plugin and it's done!                 
