@@ -4,7 +4,7 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidiochat.com
  * Description: Free live chat from Tidio Elements
- * Version: 2.0.4
+ * Version: 2.0.5
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiochat.com
  * License: GPL2
@@ -12,7 +12,7 @@
  
 class TidioLiveChat {
 
-    private $scriptUrl = '//www.tidiochat.com/redirect/';
+    private $scriptUrl = '//code.tidio.co/';
 
     public function __construct() {
         add_action('admin_menu', array($this, 'addAdminMenuLink'));
@@ -62,7 +62,7 @@ class TidioLiveChat {
     // Front End Scripts
     
     public function enqueueScripts(){
-    	wp_enqueue_script('tidio-chat', 'https://www.tidiochat.com/uploads/redirect/' . self::getPublicKey() . '.js', array(), '1.0.0', true);
+    	wp_enqueue_script('tidio-chat', '//code.tidio.co/' . self::getPublicKey() . '.js', array(), '1.0.0', true);
     }
 
     // Admin JavaScript

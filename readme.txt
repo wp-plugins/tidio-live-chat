@@ -108,6 +108,9 @@ Yes, this message will be emailed to you
 
 == Changelog ==
 
+= 2.0.5 = 
+* (added) compatibility with tidio one
+
 = 2.0.2 =
 * (added) support to sites with disabled allow_url_fopen flag 
 
