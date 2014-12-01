@@ -20,6 +20,7 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 * You can see who visits your website! 
 * You can contact any customer which is viewing your site
 * Adjust color scheme to your needs!
+* Dedicated app for mobile devices  (iOS, Android)
 * Supports 140 languages
 * Live-chat!
 
