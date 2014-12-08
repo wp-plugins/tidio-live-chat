@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Meet Tidio Live Chat. The most beautiful chat that you've seen - no logging in, no signing up, integrates with your website in less than 20 seconds!
+Meet Tidio Live Chat - a free chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
 
 == Description ==
                         
@@ -21,6 +21,7 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 * Adjust color scheme to your needs!
 * Dedicated app for mobile devices  (iOS, Android)
 * Supports 140 languages
+* 2 outstanding beatiful designs available
 * Live-chat!
 
 = How does it work? =
