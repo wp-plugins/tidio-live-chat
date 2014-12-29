@@ -30,6 +30,8 @@ will be presented with a list of your website’s users, to whom you can write
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
 
+[youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
+
 [youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
 
 = Supported languages =
@@ -40,9 +42,6 @@ visitors will be able to write to you.
 * French (soon)
 
 If you're lacking support of your language, please contact us on contact [at] tidio.net
-
-= Promo Video =
-[youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
 == Installation ==
 1. Go to WordPress Control Panel
