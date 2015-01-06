@@ -15,14 +15,13 @@ Meet Tidio Live Chat - a free chat for your website. No logging in, no signing u
 Tidio Live Chat is a live chat solution which allows you to easily communicate with your customers. It is designed essentially for WordPress community, this installation comes down only to plugin installation without logging in or registration.
 
 = Features =
-* Extremely easy installation, you only need to install plugin and it's done!                 
-* You can see who visits your website! 
+* Extremely easy installation, you only need to install plugin and it's done               
+* You can see who visits your website
 * You can contact any customer which is viewing your site
-* Adjust color scheme to your needs!
+* Adjust color scheme to your needs
 * Dedicated app for mobile devices  (iOS, Android)
 * Supports 140 languages
 * 2 outstanding beautiful designs available
-* Live-chat!
 
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
