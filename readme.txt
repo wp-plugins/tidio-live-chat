@@ -42,6 +42,8 @@ visitors will be able to write to you.
 
 If you're lacking support of your language, please contact us on contact [at] tidio.net
 
+Please note that Tidio Chat is a paid product with 7-day free trial. See [Live Chat Pricing](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
+
 == Installation ==
 1. Go to WordPress Control Panel
 1. Click "Plugins", then "Add New"
