@@ -23,8 +23,6 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 * Supports 140 languages
 * 2 outstanding beautiful designs available
 
-Please note that Tidio Chat is a paid product with 7-day free trial. See [Live Chat Pricing](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
-
 = How does it work? =
 Just after the installation process, open the “LiveChat” tab and it’s done! You 
 will be presented with a list of your website’s users, to whom you can write 
@@ -43,6 +41,8 @@ visitors will be able to write to you.
 * French (soon)
 
 If you're lacking support of your language, please contact us on contact [at] tidio.net
+
+Please note that Tidio Chat is a paid product with 7-day free trial. See [Live Chat Pricing](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
 
 == Installation ==
 1. Go to WordPress Control Panel
