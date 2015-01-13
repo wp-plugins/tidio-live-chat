@@ -29,6 +29,8 @@ will be presented with a list of your website’s users, to whom you can write
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
 
+Please note that Tidio Chat is free, after activating your plugin you will be signed to a 7 days trial period. After trial is finished you can downgrade your account to Free or still use the PRO account. [More information here.](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
+
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
 [youtube https://www.youtube.com/watch?v=GYAIWqrWZQQ]
@@ -42,7 +44,6 @@ visitors will be able to write to you.
 
 If you're lacking support of your language, please contact us on contact [at] tidio.net
 
-Please note that Tidio Chat is a paid product with 7-day free trial. See [Live Chat Pricing](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
 
 == Installation ==
 1. Go to WordPress Control Panel
