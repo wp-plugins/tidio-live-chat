@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Meet Tidio Live Chat - a live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
+Meet Tidio Live Chat - a free live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
 
 == Description ==
                         
@@ -29,7 +29,7 @@ will be presented with a list of your website’s users, to whom you can write
 anytime and there will appear an add-on on your website, thanks to which your 
 visitors will be able to write to you.
 
-Please note that Tidio Chat is free, after activating your plugin you will be signed to a 7 days trial period. After trial is finished you can downgrade your account to Free or still use the PRO account. [More information here.](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
+Please note that Tidio Chat is free, after activating your plugin you will be signed to a 7 days trial period. After trial is finished you can downgrade your account to Free or still use the PRO account. [More information here](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
 
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
