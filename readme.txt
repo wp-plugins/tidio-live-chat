@@ -40,7 +40,7 @@ visitors will be able to write to you.
 * German (soon)
 * French (soon)
 
-If you're lacking support of your language, please contact us on contact [at] tidio.net
+If you're lacking support of your language, please contact us on contact[at]tidio.net or visit our website www.tidiochat.com
 
 Please note that Tidio Chat is free, after activating your plugin you will be signed to a 7 days trial period. After trial is finished you can downgrade your account to Free or still use the PRO account. [More information here](http://www.tidiochat.com/en/pricing "Live Chat Pricing").
 
@@ -82,7 +82,7 @@ Yes, from the history menu tab
 Basically no, but you can set some automatic messages to start a conversation with customers
 
 = Is there an application for iOS or Android? =
-Yes, but it’s still in beta
+Yes, you can download app from App Store or Google Play
 
 = Can I install TidioChat on my plain html site? =
 Yes
