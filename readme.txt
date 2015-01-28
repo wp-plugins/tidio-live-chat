@@ -17,17 +17,14 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 = Features =
 * Extremely easy installation, you only need to install plugin and it's done               
 * You can see who visits your website
-* You can contact any customer which is viewing your site
+* You can contact any customer which is visiting your site
 * Adjust color scheme to your needs
 * Dedicated app for mobile and desktop devices (iOS, Android, Windows, OS X, Chrome)
 * Supports 140 languages
 * 2 outstanding beautiful designs available
 
 = How does it work? =
-Just after the installation process, open the “LiveChat” tab and it’s done! You 
-will be presented with a list of your website’s users, to whom you can write 
-anytime and there will appear an add-on on your website, thanks to which your 
-visitors will be able to write to you.
+Just after the installation process, open the “Live Chat” tab and it’s done! You will see a list of visitors on your website, to whom you can write anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time. 
 
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
