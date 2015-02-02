@@ -53,21 +53,22 @@ Please note that Tidio Chat is free, after activating your plugin you will be si
 == Frequently Asked Questions ==
 
 = Do I need to sign up in order to use the Chat? =
-No, in order to use the Chat you just need to install the add-on and it’s done! No registration/logging in required.
+No, to use the chat you just need to install the plugin and it’s done! No registration or logging in required
 
 = Can I add infinite number of agents? =
-Yes
-= Is there a way to translate every single element of TidioChat? =
+Yes , there is no limit on number of agents
+
+= Is there a way to translate every single element of Tidio Chat? =
 Yes, you can translate all elements of Tidio Chat your control panel
 
 = Can I change the colour of the chat’s widget? =
 Yes, you can change the chat’s appearance according to your needs.
 
 = Do I need to know any programming language to install Tidio Chat? =
-No
+No, simply integrate the chat with just few clicks
 
 = Can I manage TidioChat for two sites, from one control panel? =
-Generally no, but you can switch between projects easily
+You can switch between projects easily or open another project in incognito/private mode
 
 = If I’ll have multiple agents, is there a way to have a separate avatar for every single agent? =
 Yes
