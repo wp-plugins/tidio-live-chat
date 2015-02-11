@@ -85,6 +85,14 @@ Yes, you can download mobile app from App Store or Google Play
 = Can I install TidioChat on my plain html site? =
 Yes you can 
 
+= Is it possible to start a conversation before the visitor? =
+Yes, you can do it with automatic messages feature or simply choose a client from the visitors list and engage a conversation 
+
+= Can I move the Tidio Chat widget? =
+Yes, there are 2 positions for the chat, bottom left and bottom right corner 
+
+= Can I hide chat’s widget? =
+Yes, simply go to your chat panel and switch “Display” option to off. 
 
 == Screenshots ==
 1. Admin Panel
