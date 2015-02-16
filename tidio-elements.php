@@ -26,7 +26,12 @@ class TidioLiveChat {
         
         add_action('deactivate_'.plugin_basename(__FILE__), array($this, 'uninstall'));	
 
-        add_action('wp_ajax_tidio_chat_redirect', array($this, 'ajaxTidioChatRedirect'));	
+        add_action('wp_ajax_tidio_chat_redirect', array($this, 'ajaxTidioChatRedirect'));
+        
+        if(!empty($_GET['tidio_chat_clear_cache'])){
+            delete_option('tidio-chat-external-public-key');
+            delete_option('tidio-chat-external-private-key');
+	}
 
     }
 	
