@@ -31,7 +31,7 @@ class TidioLiveChat {
         if(!empty($_GET['tidio_chat_clear_cache'])){
             delete_option('tidio-chat-external-public-key');
             delete_option('tidio-chat-external-private-key');
-	}
+        }
 
     }
 	
