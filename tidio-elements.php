@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidiochat.com
- * Description: Free live chat from Tidio Elements
+ * Description: Tidio Live Chat 
  * Version: 2.0.5
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiochat.com
@@ -31,6 +31,11 @@ class TidioLiveChat {
         if(!empty($_GET['tidio_chat_clear_cache'])){
             delete_option('tidio-chat-external-public-key');
             delete_option('tidio-chat-external-private-key');
+        }
+        
+        if(!empty($_GET['tidio_chat_version'])){
+            echo '2.0.5';
+            exit;
         }
 
     }
