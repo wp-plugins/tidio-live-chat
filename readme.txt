@@ -3,7 +3,7 @@ Contributors: tytus-tytus, maciekmp
 Tags: free live chat, plugin, facebook, admin, live chat, chat, livechat, post, tidio, widget, post, posts, twitter 
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.4
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
