@@ -2,7 +2,7 @@
 Contributors: tytus-tytus, maciekmp
 Tags: free live chat, plugin, facebook, admin, live chat, chat, livechat, post, tidio, widget, post, posts, twitter 
 Donate link: http://www.tidioelements.com/
-Requires at least: 3.4
+Requires at least: 3.0
 Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2
@@ -15,13 +15,15 @@ Meet Tidio Live Chat - a free live chat for your website. No logging in, no sign
 Tidio Live Chat is a live chat solution which allows you to easily communicate with your customers. It is designed essentially for WordPress community, this installation comes down only to plugin installation without logging in or registration.
 
 = Features =
-* Extremely easy installation, you only need to install plugin and it's done               
+* Extremely easy installation, you only need to install the plugin and it's done
 * You can see who visits your website
-* You can contact any customer which is visiting your site
-* Adjust color scheme to your needs
+* You can contact any customer that is visiting your site
+* Adjust colour scheme to your needs
 * Dedicated app for mobile and desktop devices (iOS, Android, Windows, OS X, Chrome)
-* Supports 140 languages
-* 2 outstanding beautiful designs available
+* Widget supports 140 languages
+* 2 outstanding designs available
+* Offline messages form for your visitors to send you an email, when you are not online
+* Contact your visitor via email when he left the chat
 
 = How does it work? =
 Just after the installation process, open the “Live Chat” tab and it’s done! You will see a list of visitors on your website, to whom you can write anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time. 
