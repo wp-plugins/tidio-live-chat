@@ -97,10 +97,10 @@ Yes, there are 2 positions for the chat, bottom left and bottom right corner
 Yes, simply go to your chat panel and switch “Display” option to off. 
 
 == Screenshots ==
-1. Admin Panel
-2. We have dedicated application for iOS, Android, Google Chrome and for operating system such us Windows/OS X
-3. Automatic messages support
-4. Edit view
+1. Chat Panel
+2. History
+3. We have dedicated application for iOS, Android, Google Chrome and for operating system such us Windows/OS X
+4. Appearance
 
 == Changelog ==
 
