@@ -21,7 +21,7 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 * Adjust colour scheme to your needs
 * Dedicated app for mobile and desktop devices (iOS, Android, Windows, OS X, Chrome)
 * Widget supports 140 languages
-* 2 outstanding designs available
+* 3 outstanding designs available
 * Offline messages form for your visitors to send you an email, when you are not online
 * Contact your visitor via email when he left the chat
 
@@ -82,7 +82,7 @@ Yes, from the history menu, on the left side of your chat panel
 Basically no, but you can set automatic messages to engage a conversation with customers
 
 = Is there an application for iOS or Android? =
-Yes, you can download mobile app from App Store or Google Play
+Yes, you can download mobile app from App Store (http://goo.gl/mqth2P) or Google Play (http://goo.gl/ayibFD)
 
 = Can I install TidioChat on my plain html site? =
 Yes you can 
