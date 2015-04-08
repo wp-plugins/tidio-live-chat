@@ -4,7 +4,7 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidiochat.com
  * Description: Tidio Live Chat - Live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
- * Version: 2.0.5
+ * Version: 2.0.6
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiochat.com
  * License: GPL2
@@ -72,7 +72,12 @@ class TidioLiveChat {
     // Front End Scripts
     
     public function enqueueScripts(){
-    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.0.5', true);
+    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.0.6', true);
+		
+		function insert_tidio_chat_noscript_code() {
+			echo '<noscript><a href="https://www.tidiochat.com" title="tidiochat.com" target="_blank">tidiochat.com</a></noscript>';
+		};
+		add_action('wp_footer', 'insert_tidio_chat_noscript_code');
     }
 
     // Admin JavaScript
