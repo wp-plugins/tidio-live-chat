@@ -73,11 +73,6 @@ class TidioLiveChat {
     
     public function enqueueScripts(){
     	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.0.6', true);
-		
-		function insert_tidio_chat_noscript_code() {
-			echo '<noscript><a href="https://www.tidiochat.com" title="tidiochat.com" target="_blank">tidiochat.com</a></noscript>';
-		};
-		add_action('wp_footer', 'insert_tidio_chat_noscript_code');
     }
 
     // Admin JavaScript
