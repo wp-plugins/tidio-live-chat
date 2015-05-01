@@ -3,7 +3,7 @@ Contributors: tytus-tytus, maciekmp
 Tags: free live chat, plugin, facebook, admin, live chat, chat, livechat, post, tidio, widget, post, posts, twitter, zendesk, mailchimp
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.0
-Tested up to: 4.2
+Tested up to: 4.2.1
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,10 +24,10 @@ Tidio Live Chat is a live chat solution which allows you to easily communicate w
 * 3 outstanding designs available
 * Offline messages form for your visitors to send you an email, when you are not online
 * Contact your visitor via email when he left the chat
-* Integration with Zendesk, GetResponse and MailChimp
+* Integration with Zendesk, GetResponse, SalesForce and MailChimp
 
 = How does it work? =
-Just after the installation process, open the “Live Chat” tab and it’s done! You will see a list of visitors on your website, to whom you can write anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time. 
+Just after the installation process, open the “Tidio Chat” tab and it’s done! You will see a list of visitors on your website, to whom you can write anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time. 
 
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
