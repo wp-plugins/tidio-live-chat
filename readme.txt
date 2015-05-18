@@ -3,27 +3,27 @@ Contributors: tytus-tytus, maciekmp
 Tags: free live chat, plugin, facebook, admin, live chat, chat, livechat, post, tidio, widget, post, posts, twitter, zendesk, mailchimp
 Donate link: http://www.tidioelements.com/
 Requires at least: 3.0
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Meet Tidio Live Chat - a free live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
+Meet Tidio Live Chat - a free live chat for your website. No login necessary, and no registration required - integrates with your website in less than 20 seconds.
 
 == Description ==
                         
-Tidio Live Chat is a live chat solution which allows you to easily communicate with your customers. It is designed essentially for WordPress community, this installation comes down only to plugin installation without logging in or registration.
+Tidio Live Chat is a live chat service which allows you to easily communicate with your customers. It is designed specifically for the WordPress community. Once you install the plugin, you will be ready to take full advantage of the benefits our service provides; no registration required.
 
 = Features =
-* Extremely easy installation, you only need to install the plugin and it's done
-* You can see who visits your website
-* You can contact any customer that is visiting your site
+* Extremely easy installation, once you install the plugin, you’re ready to go
+* Keep track of who visits your website
+* Contact any customer that is currently visiting your site
 * Adjust colour scheme to your needs
 * Dedicated app for mobile and desktop devices (iOS, Android, Windows, OS X, Chrome)
-* Widget supports 140 languages
-* 3 outstanding designs available
+* Integrated widget supports 140 languages
+* Available in 3 outstanding designs 
 * Offline messages form for your visitors to send you an email, when you are not online
-* Contact your visitor via email when he left the chat
+* Contact your visitor via email when they leave the chat
 * Integration with Zendesk, GetResponse, SalesForce and MailChimp
 
 = How does it work? =
