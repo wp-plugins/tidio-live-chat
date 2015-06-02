@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Meet Tidio Live Chat - a free live chat for your website. No login necessary, and no registration required - integrates with your website in less than 20 seconds.
+Meet Tidio Live Chat - a free live chat for your website. No login or registration required - It integrates with your website in less than 20 seconds
 
 == Description ==
                         
@@ -24,10 +24,10 @@ Tidio Live Chat is a live chat service which allows you to easily communicate wi
 * Available in 3 outstanding designs 
 * Offline messages form for your visitors to send you an email, when you are not online
 * Contact your visitor via email when they leave the chat
-* Integration with Zendesk, GetResponse, SalesForce and MailChimp
+* Integration with Zendesk, GetResponse, SalesForce and MailChimp and many more...
 
 = How does it work? =
-Just after the installation process, open the “Tidio Chat” tab and it’s done! You will immediately see a list of visitors on your website, to whom you can write to anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time.
+Right after you install, open the “Tidio Chat” tab and you're ready to go! You will immediately see a list of visitors on your website, to whom you can write to anytime. Chat box will be visible on your website so your visitors will be able to contact you in real time.
 
 [youtube https://www.youtube.com/watch?v=lL84qzWi4zQ]
 
