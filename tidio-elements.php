@@ -4,15 +4,20 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidiochat.com
  * Description: Tidio Live Chat - Live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
- * Version: 2.0.6
+ * Version: 2.1
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiochat.com
  * License: GPL2
  */
  
+error_reporting(-1);
+ini_set('display_errors', 'On');
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+ 
 class TidioLiveChat {
 
     private $scriptUrl = '//code.tidio.co/';
+    private $tidioOne;
 
     public function __construct() {
         add_action('admin_menu', array($this, 'addAdminMenuLink'));
@@ -34,13 +39,46 @@ class TidioLiveChat {
         }
         
         if(!empty($_GET['tidio_chat_version'])){
-            echo '2.0.5';
+            echo '2.1';
             exit;
         }
+        
+		// WooCommerce Hooks - Active only after activiation by user, default is off
+		
+		if(get_option('tidio-one-woo-hooks-chat') && !class_exists('TidioOneApi')){
 
+			$tidioOneLibPath = plugin_dir_path(__FILE__).'classes/TidioOneApi.php';
+			
+			if(file_exists($tidioOneLibPath)){
+				
+				include($tidioOneLibPath);
+				
+				$this->tidioOne = new TidioOneApi( self::getPublicKey() );
+				add_action('woocommerce_checkout_order_processed', array($this, 'wooPaymentCharged'));
+				add_action('woocommerce_add_to_cart', array($this, 'wooAddToCart'), 10, 6);
+				add_action('woocommerce_cart_item_removed', array($this, 'wooRemoveFromCart'), 10, 2);
+				
+				add_action('wp_head',array($this, 'wooAddScript'));
+			}
+		}
+		
+		// Activation by user process, have to use private key
+		
+		if(!empty($_GET['tidio_one_hooks_activiation']) && $_GET['tidio_one_hooks_activiation']==self::getPrivateKey()){
+			if(!get_option('tidio-one-woo-hooks')){
+				update_option('tidio-one-woo-hooks', '1');
+				update_option('tidio-one-woo-hooks-chat', '1');
+				echo 'OK';
+				exit;
+			} else {
+				echo 'SETTED';
+				exit;
+			}
+		};
+		
     }
 	
-	// Ajax - Create New Project
+    // Ajax - Create an new project
 	
 	public function ajaxTidioChatRedirect(){
 		
@@ -72,7 +110,7 @@ class TidioLiveChat {
     // Front End Scripts
     
     public function enqueueScripts(){
-    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.0.6', true);
+    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.1', true);
     }
 
     // Admin JavaScript
@@ -169,7 +207,95 @@ class TidioLiveChat {
         return get_option('tidio-chat-external-public-key');
     }
     
-    
+	// WooCommerce Hooks - Thanks to this option, chat operator can see what user do while talking with him
+	// Based on Tidio One API
+
+    public function wooPaymentCharged($orderId) {
+		
+		$visitorId = $this->getVisitorId();
+		
+		if(!$visitorId){
+			return false;
+		}
+		
+        $order = new WC_Order($orderId);
+        $curreny = $order->get_order_currency();
+        $amount = $order->get_total();
+        $response = $this->tidioOne->request('api/track', array(
+			'name' => 'payment charged',
+			'visitorId' => $visitorId
+        ));
+    }
+
+    public function wooAddToCart($cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data) {
+		
+		$visitorId = $this->getVisitorId();
+				
+		if(!$visitorId){
+			return false;
+		}
+		
+        $response = $this->tidioOne->request('api/track', array(
+			'name' => 'add to cart',
+			'visitorId' => $visitorId,
+			'data' => array(
+				'_product_id' => $product_id,
+				'_product_name' => get_the_title($product_id),
+				'_product_quantity' => $quantity,
+				'_product_url' => get_permalink($product_id),
+			)
+        ));
+    }
+
+    public function wooRemoveFromCart($cart_item_key, $cart) {
+		
+		$visitorId = $this->getVisitorId();
+		
+		if(!$visitorId){
+			return false;
+		}
+		
+        foreach ($cart->removed_cart_contents as $key => $removed) {
+            $product_id = $removed['product_id'];
+            $quantity = $removed['quantity'];
+            $response = $this->tidioOne->request('api/track', array(
+				'name' => 'remove from cart',
+				'visitorId' => $visitorId,
+				'data' => array(
+					'_product_id' => $product_id,
+					'_product_quantity' => $quantity,
+				)
+            ));
+        }
+    }
+	
+	public function wooAddScript(){
+		echo '<script type="text/javascript"> document.tidioOneWooTrackingInside = 1; </script>';
+	}
+	
+	private function getVisitorId(){
+
+		if(empty($_COOKIE['_tidioOne_'])){
+			return null;
+		}
+		
+		if(!function_exists('json_decode')){
+			return null;
+		}
+		
+		$data = $_COOKIE['_tidioOne_'];
+		
+		$data = str_replace('\"', '"', $data);
+		
+		@$data = json_decode($data, true);
+				
+		if(!$data || empty($data['tidioOneVistiorId'])){
+			return null;
+		}
+				
+		return $data['tidioOneVistiorId'][0];
+		
+	}
 
 }
 

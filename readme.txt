@@ -105,6 +105,9 @@ Yes, simply go to your chat panel and switch the “Display” option to off.
 
 == Changelog ==
 
+= 2.1 = 
+* (added) compatibility with tidio one api
+
 = 2.0.5 = 
 * (added) compatibility with tidio one
 
