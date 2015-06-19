@@ -1,7 +1,5 @@
 <?php
 
-defined('ABSPATH') or die('No script kiddies please!');
-
 class TidioOneApi {
 
     private $publicKey;
