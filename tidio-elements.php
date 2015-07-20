@@ -4,7 +4,7 @@
  * Plugin Name: Tidio Chat
  * Plugin URI: http://www.tidiochat.com
  * Description: Tidio Live Chat - Live chat for your website. No logging in, no signing up - integrates with your website in less than 20 seconds.
- * Version: 2.1.1
+ * Version: 2.1.2
  * Author: Tidio Ltd.
  * Author URI: http://www.tidiochat.com
  * License: GPL2
@@ -30,12 +30,12 @@ class TidioLiveChat {
         add_action('wp_ajax_tidio_chat_redirect', array($this, 'ajaxTidioChatRedirect'));
         
         if(!empty($_GET['tidio_chat_clear_cache'])){
-            delete_option('tidio-chat-external-public-key');
-            delete_option('tidio-chat-external-private-key');
+            delete_option('tidio-one-public-key');
+            delete_option('tidio-one-private-key');
         }
         
         if(!empty($_GET['tidio_chat_version'])){
-            echo '2.1.1';
+            echo '2.1.2';
             exit;
         }
         
@@ -80,8 +80,8 @@ class TidioLiveChat {
 		
 		if(!empty($_GET['access_status']) && !empty($_GET['private_key']) && !empty($_GET['public_key'])){
 			
-			update_option('tidio-chat-external-public-key', $_GET['public_key']);
-			update_option('tidio-chat-external-private-key', $_GET['private_key']);
+			update_option('tidio-one-public-key', $_GET['public_key']);
+			update_option('tidio-one-private-key', $_GET['private_key']);
 			
 			$view = array(
 				'mode' => 'redirect',
@@ -106,7 +106,7 @@ class TidioLiveChat {
     // Front End Scripts
     
     public function enqueueScripts(){
-    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.1.1', true);
+    	wp_enqueue_script('tidio-chat', $this->scriptUrl . self::getPublicKey() . '.js', array(), '2.1.2', true);
     }
 
     // Admin JavaScript
@@ -150,7 +150,11 @@ class TidioLiveChat {
 
     public static function getPrivateKey() {
 		
-        $privateKey = get_option('tidio-chat-external-private-key');
+		self::syncPrivateKey();
+		
+		//
+		
+        $privateKey = get_option('tidio-one-private-key');
 
         if ($privateKey) {
             return $privateKey;
@@ -158,33 +162,57 @@ class TidioLiveChat {
 
         @$data = file_get_contents(self::getAccessUrl());
         if (!$data) {
-            update_option('tidio-chat-external-private-key', 'false');
+            update_option('tidio-one-private-key', 'false');
             return false;
         }
 
         @$data = json_decode($data, true);
         if (!$data || !$data['status']) {
-            update_option('tidio-chat-external-private-key', 'false');
+            update_option('tidio-one-private-key', 'false');
             return false;
         }
 
-        update_option('tidio-chat-external-private-key', $data['value']['private_key']);
-        update_option('tidio-chat-external-public-key', $data['value']['public_key']);
+        update_option('tidio-one-private-key', $data['value']['private_key']);
+        update_option('tidio-one-public-key', $data['value']['public_key']);
 
         return $data['value']['private_key'];
     }
+	
+	// Sync private key with old version
+	
+	public static function syncPrivateKey(){
+				
+		if(get_option('tidio-one-public-key')){
+			return false;
+		}
+		
+		$publicKey = get_option('tidio-chat-external-public-key');
+		$privateKey = get_option('tidio-chat-external-private-key');
+		
+		if(!$publicKey || !$privateKey){
+			return false;
+		}
+		
+		// sync old variables with new one
+		
+		update_option('tidio-one-public-key', $publicKey);
+		update_option('tidio-one-private-key', $privateKey);
+		
+		return true;
+		
+	}
 	
 	// Get Access Url
 	
 	public static function getAccessUrl(){
 		
-		return 'https://www.tidiochat.com/access/create?url='.urlencode(site_url()).'&platform=wordpress&email='.urlencode(get_option('admin_email')).'&_ip='.$_SERVER['REMOTE_ADDR'];
+		return 'http://www.tidio.co/external/create?url='.urlencode(site_url()).'&platform=wordpress&email='.urlencode(get_option('admin_email')).'&_ip='.$_SERVER['REMOTE_ADDR'];
 		
 	}
 	
 	public static function getRedirectUrl($privateKey){
 		
-		return 'https://external.tidiochat.com/access?privateKey='.$privateKey;
+		return 'https://www.tidio.co/external/access?privateKey='.$privateKey.'&app=chat';
 		
 	}
 	
@@ -192,7 +220,7 @@ class TidioLiveChat {
 
     public static function getPublicKey() {
 
-        $publicKey = get_option('tidio-chat-external-public-key');
+        $publicKey = get_option('tidio-one-public-key');
 
         if ($publicKey) {
             return $publicKey;
@@ -200,7 +228,7 @@ class TidioLiveChat {
 
         self::getPrivateKey();
 
-        return get_option('tidio-chat-external-public-key');
+        return get_option('tidio-one-public-key');
     }
     
 	// WooCommerce Hooks - Thanks to this option, chat operator can see what user do while talking with him
